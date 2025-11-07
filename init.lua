@@ -470,7 +470,7 @@ require('lazy').setup({
         { "[",             group = "prev" },
         { "]",             group = "next" },
         { "g",             group = "goto" },
-        { "gs",            group = "surround" },
+        { "s",             group = "surround" },
         { "z",             group = "fold" },
         {
           "<leader>b",
@@ -912,23 +912,11 @@ require('lazy').setup({
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
-      -- - gsaiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      -- - gsd'   - [S]urround [D]elete [']quotes
-      -- - gsdq   - [S]urround [D]elete [q]uotes (' / " / `)
-      -- - gsr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup({
-        mappings = {
-          add = 'gsa',       -- Add surrounding in Normal and Visual modes
-          delete = 'gsd',    -- Delete surrounding
-          find = 'gsf',      -- Find surrounding (to the right)
-          find_left = 'gsF', -- Find surrounding (to the left)
-          highlight = 'gsh', -- Highlight surrounding
-          replace = 'gsr',   -- Replace surrounding
-
-          suffix_last = 'l', -- Suffix to search with "prev" method
-          suffix_next = 'n', -- Suffix to search with "next" method
-        },
-      })
+      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
+      -- - sd'   - [S]urround [D]elete [']quotes
+      -- - sdq   - [S]urround [D]elete [q]uotes (' / " / `)
+      -- - sr)'  - [S]urround [R]eplace [)] [']
+      require('mini.surround').setup({})
 
       -- gcc - toggle comment current line
       -- gc  - toggle comment visual selected lines
